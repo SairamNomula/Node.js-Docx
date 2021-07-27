@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Nodejs Document</title>
+</head>
+<body>
+    
+    <div class="container default">
+
+        <div class="header">
+          <div class="header-nav">
+            <div class="left-div">
+              <img class='logo' src="https://e7.pngegg.com/pngimages/1006/374/png-clipart-web-development-node-js-socket-io-javascript-network-socket-modernization-miscellaneous-logo-thumbnail.png" alt="Nodejs logo"/>
+            </div>
+            <div class="right-div">
+            </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <nav id="navbar">
+
+          <header>
+            <h1 class="js-doc-heading">Nodejs</h1>
+          </header>
+          <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+            <li><a class="nav-link" href="#Javascript_and_you">JavaScript and You</a></li>
+            <li><a class="nav-link" href="#Get_started">Get started</a></li>
+            <li><a class="nav-link" href="#Clientservers">Clients & Servers</a></li>
+            <li><a class="nav-link" href="#Modules">Modules</a></li>
+            <li><a class="nav-link" href="#How_to_create_a_Nodejs_Module">creating module..</a></li>
+            <li><a class="nav-link" href="#Events">Events</a></li>
+            <li><a class="nav-link" href="#HTTP">HTTP Module</a></li>
+            <li><a class="nav-link" href="#local_modules">Local modules</a></li>
+            <li><a class="nav-link" href="#Export_modules">Export modules</a></li>
+            <li><a class="nav-link" href="#buffer">Streams & Buffers</a></li>
+            <li><a class="nav-link" href="#pipes">Pipes</a></li>
+            <li><a class="nav-link" href="#NPM">NPM</a></li>
+            <li><a class="nav-link" href="#debug">Debugging</a></li>
+            <li><a class="nav-link" href="#framework">Frameworks</a></li>
+            
+            </ul>
+            </nav>
+            </div>
+            <div class="main-content" main id="main-doc">
+                <section class="main-section" id="Introduction">
+                    <header>Introduction</header>
+                    <article>
+                        <p>
+                            Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine).
+                        </p>
+                        <ul>
+                            <li>Node.js is a platform built on Chrome's  <a href="https://bugs.chromium.org/p/v8/issues/list" target="_blank" rel="nofollow">JavaScript runtime</a> for easily building fast and scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</li>
+                        </ul>
+                    </article>
+                    </section>
+                    <section class="main-section" id="Prerequisites">
+                      <header>Prerequisites</header>
+                      <article>
+                        <ul>
+                          <li>HTTP - You absolutely need to understand the client and server paradigm via HTTP.</li>
+                          <li>Javascript - This is an absolute must otherwise you can't even program in Node.js.</li>
+                          <li>Event Loop and Async programming.</li>
+                          <li>But wait, writing Node.js applications is one thing; understanding why they need to be written the way they are written means - understanding JavaScript. And this time for real.</li>
+                        </ul>
+                      </article>
+                    </section>
+                    
+                    <section class="main-section" id="Javascript_and_you">
+                      <header>Javascript and You</header>
+                      <article>
+                        <p>There are some really excellent JavaScript people out there. I'm not one of them. I know a thing or two about developing web applications, but I'm still new to "real" JavaScript and still new to Node.js. I learned some of the more advanced aspects of JavaScript just recently. I'm not experienced.</p>
+                        <ul>
+                          <li>Before we talk about all the technical stuff, let's take a moment and talk about you and your relationship with JavaScript. This chapter is here to allow you to estimate if reading this document any further makes sense for you.</li>
+                          <li>Nevertheless, you kept an eye on JavaScript, you saw that with the introduction of jQuery, Prototype and the likes, things got more advanced in JavaScript land, and that this language really was about more than window.open().</li>
+                          <li>However, this was all still frontend stuff, and although it was nice to have jQuery at your disposal whenever you felt like spicing up a web page, at the end of the day you were, at best, a JavaScript user, but not a JavaScript developer.</li>
+                        </ul>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="Get_started">
+                      <header>Get started</header>
+                      <article>
+                      <p>Download Node.js : The official Node.js website has installation instructions for Node.js: <a href="https://nodejs.org">https://nodejs.org</a></p>
+                      <ul>
+                        <li>Once you have downloaded and installed Node.js on your computer, let's try to display "Hello World" in a web browser.</li>
+                        <li>Open your favorite editor and create a file called helloworld.js. We want it to write "Hello World" to STDOUT, and here is the code needed to do that:  <code>console.log("Hello World");</code></li>
+                        <li>Save the file, and execute it through Node.js: <code>node helloworld.js</code></li>
+                        <li>This should output Hello World on your terminal.</li>
+                      </ul>
+                    </article>
+                    </section>
+
+                    <section class="main-section" id="Clientservers">
+                      <header>Clients & Servers</header>
+                      <article>
+                        <p>In general, all of the machines on the Internet can be categorized as two types: servers and clients. Those machines that provide services (like Web servers or FTP servers) to other machines are servers. And the machines that are used to connect to those services are clients.</p>
+                        <p>To keep all of these machines straight, each machine on the Internet is assigned a unique address called an IP address. IP stands for Internet protocol, and these addresses are 32-bit numbers, normally expressed as four "octets" in a "dotted decimal number." A typical IP address looks like this: <code>216.27.61.137</code></p>
+                        <p>Every machine on the Internet has a unique IP address. A server has a static IP address that does not change very often. A home machine that is dialing up through a modem often has an IP address that is assigned by the ISP when the machine dials in. That IP address is unique for that session -- it may be different the next time the machine dials in. This way, an ISP only needs one IP address for each modem it supports, rather than for each customer.</p>
+                      </article>
+                    </section>
+
+
+                    <section class="main-section" id="Modules">
+                      <header>Modules</header>
+                      <article>
+                        <p>Modules are <u>set of functions</u> that you want to include in your application (Just like Js libraries).</p>
+                        <p>There are three types of modules inNode.js based on their location to access.</p>
+                        <h4 class="subhead">Built-in Modules:</h4>
+                          <p>Node.js has a set of <b>built-in</b> modules which you can use without any further installation.These are the modules that come along with Node.js installation.</p>
+                        <h4 class="subhead">User defined Modules:</h4>
+                        <p>These are the modules written by user or a third party.</p>
+                        <h4 class="subhead">Third party Modules:</h4>
+                        <p>There are many modules available online which could be used in Node.js. Node Package Manager (NPM) helps to install those modules, extend them if necessary and publish them to repositories like Github for access to distributed machines.</p>
+                        <h4 class="subhead">Include a module:</h4>
+                        <p>Including a module in the Node.js files allows us to use the functions exposed by the module.</p>
+                        <h5>Syntax: <code>var http = require('< module_name >');</code></h5>
+                        <p class="note note notecard"><strong>Example</strong>:To include ‘http’ module in a Node.js file, we need to write, <code>var http = require('http');</code></p>
+                        <ul>
+                          <li style="color:rgb(29, 202, 107);"><strong>Using Function of a Module :</strong></li>
+                          <li>Once you have included a module by assigning it to a variable, the functions in the module could be accessed through the variable.</li></ul>
+                          <p class="note notecard2">
+                            var http = require('http');<br>
+                            http.createServer(function (req, res) {<br>
+                            res.writeHead(200, {'Content-Type': 'text/plain'});<br>
+                            res.write('Hey dude!');<br>
+                            res.end();<br>
+                            }).listen(8080);</p>
+                            <ul>
+                          <li>The function creates an HTTP Server that responds with ‘Hey dude!’ when an http request is made to port 8080.</li>
+                        </ul>
+                        <table>
+                          <tr>
+                            <th>Core module</th>
+                            <th>Description</th>
+                          </tr>
+                          <tr>
+                            <td>http</td>
+                            <td>includes classes, methods and events to create Node.js http server.</td>
+                          </tr>
+                          <tr>
+                            <td>url</td>
+                            <td>includes methods for URL resolution and parsing.</td>
+                          </tr>
+                          <tr>
+                            <td>querystring</td>
+                            <td>includes methods to deal with query string.</td>
+                          </tr>
+                          <tr>
+                            <td>path</td>
+                            <td>includes methods to deal with file paths.</td>
+                          </tr>
+                          <tr>
+                            <td>fs</td>
+                            <td>includes classes, methods, and events to work with file I/O.</td>
+                          </tr>
+                          <tr>
+                            <td>util</td>
+                            <td>includes utility functions useful for programmers.</td>
+                          </tr>
+                        </table>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="How_to_create_a_Nodejs_Module">
+                      <header>How to create a Node.js Module?</header>
+                      <article>
+                        <p>Most of the necessary functions are included in the Built-in Modules. Sometimes it is required that, when you are implementing a Node.js application for an use case, you might want to keep your business logic separately. In such cases you create a Node.js module with all the required functions in it. A Node.js Module is a .js file with one or more functions.</p>
+                        <ul>
+                          <li>The syntax to define a function in Node.js module is
+                          <code>exports.<function_name> = function (argument_1, argument_2, .. argument_N) {};</li></code>
+                          <li><b>exports</b> – is a keyword which tells Node.js that the function is available outside the module.</li>
+                          <li><b>function_name</b> – is the function name using which we can access this function in other programs.</li>
+                        </ul>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="Events">
+                      <header>Events</header>
+                      <article>
+                        <p>The <code>events</code> module provides us the EventEmitter class, which is key to working with events in Node.js.</p>
+                        <p class="note notecard2">
+                          const EventEmitter = require('events')<br>
+                          const door = new EventEmitter()
+                        </p>
+                        <p>The event listener has these in-built events:<br>
+                          <code>newListener</code> when a listener is added<br>
+                          <code>removeListener</code> when a listener is removed</p>
+                          <p><a href="https://nodejs.dev/learn/the-nodejs-events-module">Know more...</a></p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="HTTP">
+                      <header>HTTP</header>
+                      <article>
+                        <p>When I arrived at the point where I wanted to start with my first "real" Node.js application, I wondered not only how to actually code it, but also how to organize my code.Do I need to have everything in one file? Most tutorials on the web that teach you how to write a basic HTTP server in Node.js have all the logic in one place. What if I want to make sure that my code stays readable the more stuff I implement?</p>
+                        <ul>
+                          <li>Turns out, it's relatively easy to keep the different concerns of your code separated, by putting them in modules. This allows you to have a clean main file, which you execute with Node.js, and clean modules that can be used by the main file and among each other.</li>
+                          <li>Let's start with the server module. Create the file server.js in the root directory of your project, and fill it with the following code:</li></ul>
+                          <p class="note notecard2">var http = require('http');<br>
+                          http.createServer(function (req, res) {<br>
+                          res.writeHead(200, {'Content-Type': 'text/html'});<br>
+                          res.end('Hello World!');<br>
+                          }).listen(8080);<br></p>
+                          <ul>
+                          <li>Save the file on your computer. The code tells the computer to write "Hello World!" if anyone (e.g. a web browser) tries to access your computer on port 8080. That's quite interesting, isn't it. How about talking about what's going on here and leaving the question of how to organize our project for later?</li>
+                        </ul>
+                        <h4>Passing functions around</h4>
+                        <p>for example, do something like this:</p>
+                          <p class="note notecard2">function say(word) { <br>
+                          console.log(word); }<br>
+                          function execute(someFunction,value) { <br>
+                          someFunction(value); } <br>
+                          execute(say, "Hello");</p>
+                          <ul>
+                          <li>Here, we pass the function <i>say</i> as the first parameter to the execute function. Not the return value of <i>say</i>, but <i>say</i> itself! Thus, <i>say</i> becomes the local variable someFunction within execute, and execute can call the function in this variable by issuing someFunction() (adding brackets). Of course, because <i>say</i> takes one parameter, execute can pass such a parameter when calling someFunction.</li>
+                        </ul>
+                      </article>
+                    </section>
+
+
+                    <section class="main-section" id="local_modules">
+                      <header>Local Modules</header>
+                      <article>
+                        <p>Local modules are modules created locally in your Node.js application. These modules include different functionalities of your application in separate files and folders. You can also package it and distribute it via NPM, so that Node.js community can use it. For example, if you need to connect to MongoDB and fetch data then you can create a module for it, which can be reused in your application.</p>
+                        <h4><u>Writing simple module:</h4></u></h4>
+                        <p>Let's write simple logging module which logs the information, warning or error to the console. In Node.js, module should be placed in a separate JavaScript file. So, create a Log.js file and write the following code in it.</p>
+                        <p class="note notecard2">
+                          var log = { <br>
+                            info: function (info) { <br>
+                                console.log('Info: ' + info);<br>
+                            },<br>
+                            warning:function (warning) { <br>
+                                console.log('Warning: ' + warning);<br>
+                            },<br>
+                            error:function (error) { <br>
+                                console.log('Error: ' + error);<br>
+                            }};<br>
+                            module.exports = log</p>
+                        <p>In the above example of logging module, we have created an object with three functions - info(), warning() and error(). At the end, we have assigned this object to module.exports. The module.exports in the above example, it exposes a log object as a module.</p>
+                        <p>The module.exports is a special object which is included in every JS file in the Node.js application by default. Use module.exports or exports to expose a function, object or variable as a module in Node.js.Now, let's see how to use the above logging module in our application.</p>
+                        <h4><u>Loading local module:</u></h4>
+                        <p>To use local modules in your application, you need to load it using require() function in the same way as core module. However, you need to specify the path of JavaScript file of the module.The following example demonstrates how to use the above logging module contained in Log.js.</p>
+                        <p class="note notecard2">
+                          var myLogModule = require('./Log.js');<br>
+                          myLogModule.info('Node.js started');
+                        </p>
+                        <p>In the above example, app.js is using log module. First, it loads the logging module using require() function and specified path where logging module is stored. Logging module is contained in Log.js file in the root folder. So, we have specified the path './Log.js' in the require() function. The '.' denotes a root folder.</p>
+                        <p>The require() function returns a log object because logging module exposes an object in Log.js using module.exports. So now you can use logging module as an object and call any of its function using dot notation e.g myLogModule.info() or myLogModule.warning() or myLogModule.error()</p>
+                        <p>Run the above example using command prompt (in Windows) as shown below.</p>
+                        <p class="note notecard2">
+                          C:\> node app.js<br>
+                          Info: Node.js started
+                        </p>
+                        <p>Thus, you can create a local module using module.exports and use it in your application.</p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="Export_modules">
+                      <header>Export modules</header>
+                      <article>
+                        <p>The <code>module.exports</code> is a special object which is included in every JavaScript file in the Node.js application by default. The module is a variable that represents the current module, and exports is an object that will be exposed as a module. So, whatever you assign to <code>module.exports</code> will be exposed as a module.</p>
+                        <p><a href="https://www.tutorialsteacher.com/nodejs/nodejs-module-exports">Know more...</a></p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="buffer">
+                      <header>Streams & Buffers</header>
+                      <article>
+                        <p>To handle and manipulate streaming data like a video, a large file, etc., we need streams in Node. The streams module in Node.js manages all streams. Buffer is just a temporary storage spot for a chunk of data thats being transferred from one place to another place.</p> <br>
+                        <h2><u>Types of streams</u>:</h2>
+                          <h4 class="subhead">Readable Streams:</h4>  
+                          <p>To create a stream of data for reading (say, reading a large file in chunks).</p>
+                          <h4 class="subhead">Writable Streams:</h4>
+                          <p>To create a stream of data for writing (say, writing a large amount of data to a file).</p>
+                          <h4 class="subhead">Duplex Streams:</h4>
+                          <p>To create a stream that is both readable and writable at the same time. We can read and write to a duplex stream (say, a socket connection between a client and a server).</p>
+                          <h4 class="subhead">Transform Streams:</h4>
+                          <p>To create a stream that is readable and writable, but the data can be modified while reading and writing to the stream (say, compressing data by the client and server before while requesting).</p> <br>
+                        <h2>Why Streams?</h2>
+                        <h4 class="subhead">Memory efficiency:</h4>
+                        <p>We don't need to load large amounts of data in memory before you are able to process it.</p>
+                        <h4 class="subhead">Time efficiency:</h4>
+                        <p>It takes way less time to start processing data, since you can start processing as soon as you have it, rather than waiting till the whole data payload is available.</p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="pipes">
+                      <header>Pipes</header>
+                      <article>
+                        <p>The pipe() function reads data from a readable stream as it becomes available and writes it to a destination writable stream.</p>
+                        <p class="note notecard2">
+                          const http = require('http')<br>
+                          const fs = require('fs')<br>
+                          const server = http.createServer((req, res) => {<br>
+                            const stream = fs.createReadStream(__dirname + '/data.txt')<br>
+                            stream.pipe(res)})<br>
+                            server.listen(3000)</p>
+                            <p>The above example uses the line stream.pipe(res): the pipe() method is called on the file stream.</p>
+                            <p>What does this code do? It takes the source, and pipes it into a destination.You call it on the source stream, so in this case, the file stream is piped to the HTTP response.The return value of the pipe() method is the destination stream, which is a very convenient thing that lets us chain multiple pipe() calls, like this:</p>
+                            <p class="note notecard2">src.pipe(dest1).pipe(dest2)</p>
+                            <p>This construct is the same as doing.</p>
+                            <p class="note notecard2">
+                              src.pipe(dest1)<br>
+                              dest1.pipe(dest2)
+                            </p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="NPM">
+                      <header>Node Packet Manager (NPM)</header>
+                      <article>
+                        <p>Node Package Manager (NPM) is a command line tool that installs, updates or uninstalls Node.js packages in your application. It is also an online repository for open-source Node.js packages. The <a href="https://www.npmjs.com/">node community</a> around the world creates useful modules and publishes them as packages in this repository.NPM is included with Node.js installation.</p>
+                        <p>NPM performs the operation in two modes: global and local. In the global mode, NPM performs operations which affect all the Node.js applications on the computer whereas in the local mode, NPM performs operations for the particular local directory which affects an application in that directory only.</p>
+                        <p>Use this command to install any third party module in your local Node.js project folder: <code>npm install {package name}</code></p>
+                        <p>For example, <code>npm install express</code> command installs ExpressJs.</p>
+                        <p>All the modules installed using NPM are installed under node_modules folder. The above command will create ExpressJS folder under node_modules folder in the root folder of your project and install Express.js there.</p>
+                        <p><strong>Add dependency into package.json :</strong> Use --save at the end of the install command to add dependency entry into package.json of your application.</p>
+                        <p>For example, <code>npm install express --save</code> adds dependency entry into the package.json.</p>
+                        <h4 class="subhead">Install package globally:</h4>
+                          <p>NPM can also install packages globally so that all the node.js application on that computer can import and use the installed packages. NPM installs global packages into /<User>/local/lib/node_modules folder. Apply -g in the install command to install package globally. </p>
+                            <p>For example, <code>npm install -g express</code> will install ExpressJS globally.</p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="Debugging">
+                      <header>Debugging Node.js</header>
+                      <article>
+                        <p>You can debug Node.js application using various tools including following:<br>
+                          1.Core Node.js debugger<br>
+                          2.Node Inspector<br>
+                          3.Built-in debugger in IDEs</p>
+                      </article>
+                    </section>
+
+                    <section class="main-section" id="Frameworks">
+                      <header>Frameworks</header>
+                      <p>There are various third party open-source frameworks available in Node Package Manager which makes Node.js application development faster and easy. You can choose an appropriate framework as per your application requirements.</p>
+                      <p><a href="http://nodeframework.com/">Know more...</a></p>
+                    </section>
+
+                    <section class="main-section" id="Contact me">
+                      <article>
+                        <p class="note contact">
+                          Hey! This is the end of this session!<br>
+                          Connect with me on <a href="https://www.linkedin.com/in/sairam-nomula-8aa752192/">LinkedIn</a>.<br>
+                          To view my projects/codes, visit my <a href="https://github.com/SairamNomula">Github</a> profile.
+                        </p>
+                      </article>
+                    </section>
+                    </div>
+         </div>
+     </body>
+</html>
+                    
